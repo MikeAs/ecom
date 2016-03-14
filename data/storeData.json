@@ -1,0 +1,32 @@
+{
+	"0":{
+		"id": 1,
+		"name": "boutique du Stade",
+		"address": "4 rue de la Foire aux Vins 75012 Paris",
+		"schedule":	"lun-ven 10h00 19h00, sam 10h00 12h00"
+	},
+	"1":{
+		"id": 2,
+		"name": "marques à gogo",
+		"address": "15 avenue du président imaginaire 13001 Marseille",
+		"schedule":	"lun-ven 10h00 18h00"
+	},
+	"2":{
+		"id": 3,
+		"name": "les magiciens du net",
+		"address": "2 place du centre 75000 Paris",
+		"schedule":	"lun-mar 10h00 19h00, mer 10h00 14h00, jeu-ven 10h00 19h00"
+	},
+	"3":{
+		"id": 4,
+		"name": "articles de luxe",
+		"address": "154 boulevard Rodriguez 69000 Lyon",
+		"schedule":	"lun-ven 10h00 19h00"
+	},
+	"4":{
+		"id": 5,
+		"name": "marché aux puces",
+		"address": "4 rue Frank Herbert 17000 La Rochelle",
+		"schedule":	"lun-dim 10h00 19h00"
+	}
+}
