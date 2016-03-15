@@ -9,15 +9,25 @@
 	</head>
 	<body>
 		<section>
-			<div class="content">
-				<div class="row"></div>
+			<div class="main">
+				<div class="row">
+					<div ng-view></div>
+				</div>
 			</div>
 		</section>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+		<script src="https://code.angularjs.org/1.4.9/angular-route.min.js"></script>
 		
 		<script type="text/javascript" src="javascript/app.js"></script>
+		<script type="text/javascript" src="javascript/routes.js"></script>
+
+		<script type="text/javascript" src="javascript/controllers/storeController.js"></script>
+		<script type="text/javascript" src="javascript/controllers/productController.js"></script>
+		<script type="text/javascript" src="javascript/controllers/confirmationController.js"></script>
+		
+		<script type="text/javascript" src="javascript/directives/titleDisplay.js"></script>
 	</body>
 </html>

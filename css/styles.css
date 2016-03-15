@@ -10,9 +10,13 @@ section{
 	vertical-align: middle;
 }
 
-.content{
+.main{
 	max-width: 800px;
 	max-height: 500px;
 	margin: auto;
 	border: 1px solid #000;
+}
+
+h1{
+	text-align: center;
 }
