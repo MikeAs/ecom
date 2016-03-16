@@ -1,20 +1,20 @@
 angular.module('ecomWebsite')
 .config(function($routeProvider) {
 	$routeProvider
-	.when("/stores", {
-		templateUrl: "templates/pages/storeSelection.html",
-		controller: "storeController",
-		controllerAs: "store"
+	.when('/stores', {
+		templateUrl: 'templates/pages/storeSelection.html',
+		controller: 'storeController',
+		controllerAs: 'stores'
 	})
-	.when("/books", {
-		templateUrl: "templates/pages/bookSelection.html",
-		controller: "productController",
-		controllerAs: "product"
+	.when('/stores/:storeId/books', {
+		templateUrl: 'templates/pages/bookSelection.html',
+		controller: 'bookController',
+		controllerAs: 'books'
 	})
-	.when("/confirmation", {
-		templateUrl: "templates/pages/confirmation.html",
-		controller: "confirmationController",
-		controllerAs: "confirmation"
+	.when('/stores/:storeId/books/:bookId', {
+		templateUrl: 'templates/pages/confirmation.html',
+		controller: 'confirmationController',
+		controllerAs: 'confirmation'
 	})
-	.otherwise({redirectTo:"/stores"});
+	.otherwise({redirectTo:'/stores'});
 });
