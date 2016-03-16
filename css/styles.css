@@ -29,3 +29,46 @@ li{
 	margin-left: 0;
 	margin-right: 0;
 }
+
+/* Store */
+
+ul.stores{
+	list-style-type: none;
+}
+
+.stores .storeName{
+	font-size: 26px;
+}
+
+.stores p{
+	margin: 2px 0;
+	padding-left: 15px;
+}
+
+.stores button{
+	margin: auto;
+}
+
+/* Book */
+
+select > option:first-child:not(.ng-scope){
+	display: none;
+}
+
+.price{
+	text-align: right;
+}
+
+.total{
+	text-align: right;
+}
+
+.total button{
+	margin-bottom: 10px;
+}
+
+.clearfix:after {
+  content:"";
+  display:block;
+  clear:both;
+}

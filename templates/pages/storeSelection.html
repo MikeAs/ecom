@@ -1,15 +1,17 @@
 <div class="row">
 	<title-display></title-display>
-	<div class="col-xs-12">
-		<ul class="stores">
-			<li ng-repeat="store in stores.datas">
-				<a href ng-click="stores.toogleStore(store.id)">{{ store.name }}</a>
-				<ul ng-show="stores.current === store.id">
-					<li>Adresse : {{ store.address }}</li>
-					<li>Horaires : {{ store.schedule }}</li>
-					<button><a ng-href="#/stores/{{ store.id }}/books">Selectionner ce magasin</a></button>
-				</ul>
-			</li>
-		</ul>
-	</div>
+	<ul class="col-xs-12 stores">
+		<li class="clearfix" ng-repeat="store in stores.datas">
+			<div class="storeName"><a href ng-click="stores.toogleStore(store.id)">{{ store.name }}</a></div>
+			<div class="info clearfix" ng-show="stores.current === store.id">
+				<div class="col-xs-12 col-sm-9">
+					<p>Adresse : {{ store.address }}</p>
+					<p>Horaires : {{ store.schedule }}</p>
+				</div>
+				<div class="col-xs-12 col-sm-3">
+					<button><a ng-href="#/stores/{{ store.id }}/books">Selectionner le magasin</a></button>
+				</div>
+			</div>
+		</li>
+	</ul>
 </div>

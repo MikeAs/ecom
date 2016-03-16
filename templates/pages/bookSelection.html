@@ -1,6 +1,18 @@
 <div class="row">
 	<title-display></title-display>
-	<div class="col-xs-12">
-		<label for="" ng-repeat="book in books.datas">{{ book.name }}<input type="number" min="0" max="5" name="bookQuantity{{ book.id }}" value="0"></label>
+	<form name="bookForm" novalidate>
+		<div class="book clearfix" ng-repeat="book in books.datas" ng-init="book.qty=0">
+			<label class="col-xs-12 col-sm-9" for="bookQuantity{{ book.id }}">{{ book.name }}</label>
+			<div class="col-xs-2 col-sm-1">
+				<select id="bookQuantity{{ book.id }}" ng-model="book.qty">
+					<option value="{{ i }}" ng-repeat="i in [] | range: 5:true">{{ i }}</option>
+				</select>
+			</div>
+			<div class="col-xs-10 col-sm-2 price">{{ book.price * book.qty | currency: '' }} €</div>
+		</div>
+	</form>
+	<div class="col-xs-12 pull-right total">
+		<p>Total : {{ books.calcTotal() | currency: '' }} €</p>
+		<button><a href>Confirmer</a></button>
 	</div>
 </div>

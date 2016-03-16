@@ -1,0 +1,32 @@
+@media (max-width: 767px){
+
+	h1{
+		font-size: 26px;
+	}
+	
+	/* Store */
+
+	.stores{
+		text-align: center;
+	}
+
+	.stores .storeName{
+		font-size: 20px;
+	}
+
+	.stores p{
+		padding: 0;
+	}
+
+	.stores .info{
+		padding: 15px 0;
+		border: 1px solid #000;
+	}
+
+	/* Book */
+
+	.price{
+		text-align: left;
+	}
+
+}
