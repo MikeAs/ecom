@@ -1,20 +1,20 @@
 angular.module("ecomWebsite")
 .service("getDatas", function($http, $q) {
-	var deferred = $q.defer();
     
-	this.stores =  function() {
-		$http({method: 'GET', url: 'data/storeData.json'})
+	function fetch(type) {
+		var deferred = $q.defer();
+		$http({method: 'GET', url: 'data/'+type+'Data.json'})
 		.success(function(data) {
 			deferred.resolve(data);
 		});
         return deferred.promise;
+	}
+
+	this.stores =  function() {
+		return fetch('store');
 	};
 	
 	this.books =  function() {
-		$http({method: 'GET', url: 'data/bookData.json'})
-		.success(function(data) {
-			deferred.resolve(data);
-		});
-        return deferred.promise;
+		return fetch('book');
 	};
 });

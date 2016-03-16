@@ -5,7 +5,7 @@ angular.module('ecomWebsite')
 	var that = this;
 	this.datas = {};
 
-	// get data from store json
+	// get data from book json
 	var promise = getDatas.books();
 	promise.then(function(data) {
 	    that.datas = data;

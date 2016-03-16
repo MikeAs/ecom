@@ -24,3 +24,8 @@ h1{
 li{
 	text-transform: capitalize;
 }
+
+.row{
+	margin-left: 0;
+	margin-right: 0;
+}
