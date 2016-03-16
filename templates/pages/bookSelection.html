@@ -1,3 +1,6 @@
 <div class="row">
 	<title-display></title-display>
+	<div class="col-xs-12">
+		<label for="" ng-repeat="book in books.datas">{{ book.name }}<input type="number" min="0" max="5" name="bookQuantity{{ book.id }}" value="0"></label>
+	</div>
 </div>
