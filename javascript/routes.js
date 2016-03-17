@@ -11,7 +11,7 @@ angular.module('ecomWebsite')
 		controller: 'bookController',
 		controllerAs: 'books'
 	})
-	.when('/confirmation/store/:storeId', {
+	.when('/confirmation', {
 		templateUrl: 'templates/pages/confirmation.html',
 		controller: 'confirmationController',
 		controllerAs: 'confirmation'

@@ -4,6 +4,7 @@ angular.module('ecomWebsite')
 
 	var that = this;
 	this.datas = {};
+	this.cart = {};
 	window.localStorage.cart = '';
 	window.localStorage.storeId = '';
 
@@ -13,18 +14,28 @@ angular.module('ecomWebsite')
 	    that.datas = data;
 	});
 
+
 	this.calcTotal = function() {
 		var total = 0;
+		var cart = [];
+
 		for(key in that.datas) {
 			var book = that.datas[key];
-			total += book.price * parseInt(book.qty);
+			var price = book.price * parseInt(book.qty)
+			total += price;
+
+			if(price > 0) {
+				cart.push(book);
+			}
 		}
+
+		that.cart = cart;
 		return total;
 	}
 
 	this.validForm = function() {
 		window.localStorage.storeId = $routeParams.storeId;
-		window.localStorage.cart = JSON.stringify(that.datas);
+		window.localStorage.cart = JSON.stringify(that.cart);
 		$location.path("/confirmation");
 	}
 }]);
