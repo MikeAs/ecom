@@ -4,8 +4,8 @@ angular.module("ecomWebsite")
 	function fetch(type) {
 		var deferred = $q.defer();
 		$http({method: 'GET', url: 'data/'+type+'Data.json'})
-		.success(function(data) {
-			deferred.resolve(data);
+		.then(function(response) {
+			deferred.resolve(response.data);
 		});
         return deferred.promise;
 	}
