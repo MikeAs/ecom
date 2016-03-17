@@ -1,3 +1,11 @@
-<div class="row">
+<div class="row confirm">
 	<title-display></title-display>
+	<div class="col-xs-12">
+		<p class="storeName">Nom du magasin : <span>{{ confirmation.storeName }}</span></p>
+		<p class="line">Liste des livres choisi :</p>
+		<p class="line clearfix" ng-repeat="book in confirmation.cart">
+			<i class="col-xs-7 col-sm-8 col-md-9">{{ book.name }}</i> <b class="col-xs-1">x{{ book.qty }}</b><span class="col-xs-4 col-sm-3 col-md-2">{{ book.price * book.qty | currency: '' }} €</span>
+		</p>
+	</div>
+	<div class="finalTotal col-xs-12">Pour un montant total de <b>{{ confirmation.calcTotal() | currency: ''}} €</b></div>
 </div>
