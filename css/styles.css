@@ -45,10 +45,6 @@ ul.stores{
 	padding-left: 15px;
 }
 
-.stores{
-	margin: auto;
-}
-
 /* Book */
 
 select > option:first-child:not(.ng-scope){
