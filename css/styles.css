@@ -45,7 +45,7 @@ ul.stores{
 	padding-left: 15px;
 }
 
-.stores button{
+.stores{
 	margin: auto;
 }
 
@@ -63,7 +63,7 @@ select > option:first-child:not(.ng-scope){
 	text-align: right;
 }
 
-.total button{
+.total input[type='submit']{
 	margin-bottom: 10px;
 }
 

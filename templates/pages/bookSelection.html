@@ -1,18 +1,18 @@
 <div class="row">
 	<title-display></title-display>
-	<form name="bookForm" novalidate>
+	<form name="bookForm" ng-submit="books.validForm()" novalidate>
 		<div class="book clearfix" ng-repeat="book in books.datas" ng-init="book.qty=0">
 			<label class="col-xs-12 col-sm-9" for="bookQuantity{{ book.id }}">{{ book.name }}</label>
 			<div class="col-xs-2 col-sm-1">
-				<select id="bookQuantity{{ book.id }}" ng-model="book.qty">
+				<select id="bookQuantity{{ book.id }}" ng-model="book.qty" required>
 					<option value="{{ i }}" ng-repeat="i in [] | range: 5:true">{{ i }}</option>
 				</select>
 			</div>
 			<div class="col-xs-10 col-sm-2 price">{{ book.price * book.qty | currency: '' }} €</div>
 		</div>
+		<div class="col-xs-12 pull-right total">
+			<p>Total : {{ books.calcTotal() | currency: '' }} €</p>
+			<input type="submit" value="Confirmer">
+		</div>
 	</form>
-	<div class="col-xs-12 pull-right total">
-		<p>Total : {{ books.calcTotal() | currency: '' }} €</p>
-		<button><a href>Confirmer</a></button>
-	</div>
 </div>
