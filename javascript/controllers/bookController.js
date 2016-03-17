@@ -5,6 +5,7 @@ angular.module('ecomWebsite')
 	var that = this;
 	this.datas = {};
 	window.localStorage.cart = '';
+	window.localStorage.storeId = '';
 
 	// get data from book json
 	var promise = getDatas.books();
@@ -16,14 +17,14 @@ angular.module('ecomWebsite')
 		var total = 0;
 		for(key in that.datas) {
 			var book = that.datas[key];
-			book.total = book.price * parseInt(book.qty);
-			total += book.total;
+			total += book.price * parseInt(book.qty);
 		}
 		return total;
 	}
 
 	this.validForm = function() {
+		window.localStorage.storeId = $routeParams.storeId;
 		window.localStorage.cart = JSON.stringify(that.datas);
-		$location.path("/confirmation/store/" + $routeParams.storeId);
+		$location.path("/confirmation");
 	}
 }]);
